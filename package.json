@@ -1,0 +1,15 @@
+{
+	"name": "parkmate-root",
+	"version": "1.0.0",
+	"scripts": {
+		"install-all": "npm install && cd backend && npm install && cd ../frountend_final && npm install",
+		"backend": "cd backend && npm run dev",
+		"frontend": "cd frountend_final && npm run dev",
+		"dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+		"build": "cd frountend_final && npm install && npm run build",
+		"start": "node backend/server.js"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.2"
+	}
+}
